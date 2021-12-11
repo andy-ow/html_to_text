@@ -10,7 +10,7 @@ MAIN_DIR="/home/andrzej/programowanie/ml/wiki-pl/pl/articles"
 DIRECTORY_DEPTH=3
 
 # Max number of jobs. Doesn't work correctly.
-MAX_JOBS=12
+MAX_JOBS=16
 
 # For excluded files, see process_all_files.sh script
 REMOVE_FOOTER="tekst udostępniany na licencji gnu free documentation license . (patrz: prawa autorskie ) wikipedia® jest zarejestrowanym znakiem towarowym wikimedia foundation . możesz przekazać dary pieniężne fundacji wikimedia . o wikipedii informacje prawne"
