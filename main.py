@@ -11,7 +11,8 @@ def html_to_text(file):
             soup = bs4(fp,features="lxml")
         #del soup['href']
         print(' '.join(soup.body.stripped_strings))
-    except:
+    except Exception as e:
+        print(e)
         print("html_to_text: Could not process file: " + file, file = sys.stderr)
         exit(0)
 
