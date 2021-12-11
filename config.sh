@@ -2,12 +2,13 @@
 BASE_DIR="/home/andrzej/programowanie/ml/wiki-pl/pl"
 OUTPUT_DIR="/home/andrzej/programowanie/ml/wiki"
 
+OUTPUT_CAT_FILE="${OUTPUT_DIR}/wikipedia_pl_2008_without_Grafika.txt"
 
 # This directory will be processed. It must be a subdirectory of BASE_DIR. BASE_DIR will be replaced with OUTPUT_DIR. It must contain subdirectories, at least DIRECTORY_DEPTH deep.
 MAIN_DIR="/home/andrzej/programowanie/ml/wiki-pl/pl/articles"
 
 # Directory depth. Main dir must have at least $DIRECTORY_DEPTH directory structure. For example MAIN_DIR/a/b/ if DIRECTORY_DEPTH=2.
-DIRECTORY_DEPTH=3
+DIRECTORY_DEPTH=2
 
 # Max number of jobs.
 MAX_JOBS=16

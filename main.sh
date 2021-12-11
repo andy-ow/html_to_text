@@ -4,8 +4,10 @@ ARTICLE_DIRS=$(find "$MAIN_DIR" -mindepth "$DIRECTORY_DEPTH" -maxdepth "$DIRECTO
 echo "$ARTICLE_DIRS" > "${LOG_FILE}_article_list"
 echo $PROCESS_ALL_FILES_SCRIPT
 echo "Please wait..."
+i=0
 while IFS= read -r file; do
-  echo \""$file"\"
+  i=$(("$i"+1))
+  echo $i \""$file"\"
   "$SCRIPT_DIR/process_all_files.sh" "$file" &
   echo "New job started."
   count=`jobs -p | wc -l`
