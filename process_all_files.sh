@@ -6,10 +6,11 @@ SCRIPT_DIR=`dirname "${BASH_SOURCE[0]}"`
 source "$SCRIPT_DIR/config.sh"
 # these directory will be processed.
 ARTICLES_DIR="$1"
+THIS_INPUT_FILES="${INPUT_FILES}_$$.tmp"
 echo "Running process_all_files.sh for directory $ARTICLES_DIR, process $$" >> "${LOG_FILE}_dir_list"
 
-find "$ARTICLES_DIR" | grep "html" | grep -v "Grafika~" | grep -v aao018 > "${INPUT_FILES}_$$"
-cat "${INPUT_FILES}_$$" >> ${INPUT_FILES}
+find "$ARTICLES_DIR" | grep "html" | grep -v "Grafika~" | grep -v aao018 > "${THIS_INPUT_FILES}"
+cat "${THIS_INPUT_FILES}" >> ${INPUT_FILES}
 i=0
 while IFS= read -r file; do
     i=$(("$i"+1))
@@ -22,5 +23,5 @@ while IFS= read -r file; do
     else
       echo "Process $$, Skipped file $file" >> "$SKIPPED_FILES"
     fi
-done < "${INPUT_FILES}_$$"
-rm "${INPUT_FILES}_$$"
+done < "${THIS_INPUT_FILES}"
+rm "${THIS_INPUT_FILES}"
