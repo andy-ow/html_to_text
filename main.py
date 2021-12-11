@@ -10,7 +10,7 @@ def html_to_text(file):
         with open(file, 'r') as fp:
             soup = bs4(fp,features="lxml")
         #del soup['href']
-        print(' '.join(soup.body.stripped_strings))
+        print(' '.join(soup.body.stripped_strings).lower())
     except Exception as e:
         print(e)
         print("html_to_text: Could not process file: " + file, file = sys.stderr)
