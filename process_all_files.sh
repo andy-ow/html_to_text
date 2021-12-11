@@ -15,6 +15,6 @@ while IFS= read -r file; do
     if [ ! -f "$output" ]; then
       mkdir -p "$(dirname $output)"
       echo "$output" >> "$OUTPUT_INPUT_FILES"
-      python "$SCRIPT_DIR/main.py" "$file">"$output" 2>>"$ERROR_FILE"
+      python "$SCRIPT_DIR/main.py" "$file" | sed "s#${REMOVE_FOOTER}##g" > "$output" 2>>"$ERROR_FILE"
     fi
 done < "${INPUT_FILES}_$$"

@@ -15,13 +15,11 @@ while IFS= read -r file; do
 done < <(printf '%s\n' "$ARTICLE_DIRS")
 count=`jobs -p | wc -l`
 echo "$count jobs running."
-echo "Please wait..."
 while [ "$count" -ne 0 ]; do
+  echo "Please wait..."
   wait -n #|| {
-    code="$?"
     count=`jobs -p | wc -l`
-    echo "$count jobs running, please wait..."
-    ([[ $code = "127" ]] && echo "Done.")
+    echo "$count jobs running."
     #break
   #}
 done;
