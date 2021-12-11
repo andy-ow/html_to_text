@@ -7,9 +7,9 @@ OUTPUT_DIR="/home/andrzej/programowanie/ml/wiki"
 MAIN_DIR="/home/andrzej/programowanie/ml/wiki-pl/pl/articles"
 
 # Directory depth. Main dir must have at least $DIRECTORY_DEPTH directory structure. For example MAIN_DIR/a/b/ if DIRECTORY_DEPTH=2.
-DIRECTORY_DEPTH=3
+DIRECTORY_DEPTH=2
 
-# Max number of jobs. Doesn't work correctly.
+# Max number of jobs.
 MAX_JOBS=16
 
 # For excluded files, see process_all_files.sh script
@@ -21,6 +21,6 @@ LOGS_DIR="/home/andrzej/programowanie/ml/wiki/logs"
 mkdir -p "$LOGS_DIR"
 
 INPUT_FILES="$LOGS_DIR/input_all_files"
-OUTPUT_INPUT_FILES="$LOGS_DIR/output_all_files"
+SKIPPED_FILES="$LOGS_DIR/skipped_files"
 ERROR_FILE="$LOGS_DIR/error"
 LOG_FILE="$LOGS_DIR/log"
