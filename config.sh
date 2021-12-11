@@ -7,12 +7,12 @@ OUTPUT_DIR="/home/andrzej/programowanie/ml/wiki"
 MAIN_DIR="/home/andrzej/programowanie/ml/wiki-pl/pl/articles"
 
 # Directory depth. Main dir must have at least $DIRECTORY_DEPTH directory structure. For example MAIN_DIR/a/b/ if DIRECTORY_DEPTH=2.
-DIRECTORY_DEPTH=2
+DIRECTORY_DEPTH=3
 
 # Max number of jobs.
 MAX_JOBS=16
 
-# For excluded files, see process_all_files.sh script
+# The following strings will be removed from files, with sed. For excluded files, see process_all_files.sh script
 REMOVE_FOOTER="tekst udostępniany na licencji gnu free documentation license . (patrz: prawa autorskie ) wikipedia® jest zarejestrowanym znakiem towarowym wikimedia foundation . możesz przekazać dary pieniężne fundacji wikimedia . o wikipedii informacje prawne"
 REMOVE_FOOTER2="views wikipedysta dyskusja aktualna wersja nawigacja strona główna kategorie artykułów bieżące wydarzenia losuj stronę zmiany zgłoś błąd zgłoś złą grafikę częste pytania (faq) kontakt z wikipedią wspomóż fundację dla edytorów ostatnie zmiany zasady edycji pomoc portal wikipedystów szukaj ostatnia edycja tej strony"
 REMOVE_REDIRECT="redirecting to"
