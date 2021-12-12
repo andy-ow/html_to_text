@@ -9,3 +9,4 @@ fi
 while IFS= read -r file; do
   cat ${file} >> ${OUTPUT_CAT_FILE}
 done < <(printf '%s\n' "$FILES")
+echo "Please remove [ edytuj ] from the file. For example run sed \"s/\[ edytuj \]/ /g\" "
